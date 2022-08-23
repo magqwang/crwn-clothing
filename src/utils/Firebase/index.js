@@ -43,11 +43,8 @@ export const createUserDocumentFromAuth = async (
 ) => {
   if (!userAuth) return;
   const userDocRef = doc(db, "user", userAuth.uid);
-  // console.log(userDocRef);
 
   const userSnapshot = await getDoc(userDocRef);
-  // console.log(userSnapshot);
-  // console.log(userSnapshot.exists());
 
   if (!userSnapshot.exists()) {
     const { displayName, email } = userAuth;
@@ -64,7 +61,6 @@ export const createUserDocumentFromAuth = async (
       console.log("error creating the user:", error.message);
     }
   }
-
   return userDocRef;
 };
 
