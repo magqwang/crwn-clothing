@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.component";
 
-import "./sign-up-form.styles.scss";
+import { SignUpContainer, StyledH2 } from "./sign-up-form.styles.jsx";
 
 const defaultFields = {
   displayName: "",
@@ -58,8 +58,8 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
-      <h2>Don't have an account?</h2>
+    <SignUpContainer>
+      <StyledH2>Don't have an account?</StyledH2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
@@ -97,11 +97,11 @@ const SignUpForm = () => {
           onChange={handleChange}
           required
         />
-        <Button buttonType="inverted" type="submit">
+        <Button buttonType={BUTTON_TYPE_CLASSES.inverted} type="submit">
           Sign Up
         </Button>
       </form>
-    </div>
+    </SignUpContainer>
   );
 };
 
