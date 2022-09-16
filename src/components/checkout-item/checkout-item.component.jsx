@@ -4,11 +4,11 @@ import { CartContext } from "../../contexts/cart.context";
 import {
   CheckoutItemContainer,
   ImageContainer,
-  Name,
-  Price,
+  BaseSpan,
   Quantity,
   Arrow,
   Value,
+  RemoveButton,
 } from "./checkout-item.styles.jsx";
 
 const CheckoutItem = ({ cartItem }) => {
@@ -26,16 +26,14 @@ const CheckoutItem = ({ cartItem }) => {
       <ImageContainer>
         <img src={imageUrl} alt={name} />
       </ImageContainer>
-      <Name>{name}</Name>
+      <BaseSpan>{name}</BaseSpan>
       <Quantity>
         <Arrow onClick={removeItemHandler}>&#10094;</Arrow>
         <Value>{quantity}</Value>
         <Arrow onClick={addItemHandler}>&#10095;</Arrow>
       </Quantity>
-      <Price>${quantity * price}</Price>
-      <div className="remove-button" onClick={clearItemHandler}>
-        &#10005;
-      </div>
+      <BaseSpan>${quantity * price}</BaseSpan>
+      <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
     </CheckoutItemContainer>
   );
 };

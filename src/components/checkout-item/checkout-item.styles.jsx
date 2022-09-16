@@ -20,11 +20,7 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const Name = styled.span`
-  width: 23%;
-`;
-
-export const Price = styled.span`
+export const BaseSpan = styled.span`
   width: 23%;
 `;
 
@@ -40,26 +36,12 @@ export const Quantity = styled.span`
 export const Arrow = styled.div`
   cursor: pointer;
 `;
+
 export const Value = styled.span`
   margin: 0 10px;
 `;
-// .checkout-item-container {
 
-//   .image-container {
-
-//   }
-//   .name,
-//   .quantity,
-//   .price {
-
-//   }
-
-//   .quantity {
-
-//   }
-
-//   .remove-button {
-//     padding-left: 12px;
-//     cursor: pointer;
-//   }
-// }
+export const RemoveButton = styled.div`
+  padding-left: 12px;
+  cursor: pointer;
+`;

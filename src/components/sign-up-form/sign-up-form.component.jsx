@@ -6,7 +6,7 @@ import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
-} from "../../utils/firebase/firebase.component";
+} from "../../utils/firebase/firebase.utils";
 
 import { SignUpContainer, StyledH2 } from "./sign-up-form.styles.jsx";
 
