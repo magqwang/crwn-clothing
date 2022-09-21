@@ -21,6 +21,7 @@ export const ProductCardContainer = styled.div`
     position: absolute;
     top: 255px;
     display: none;
+    font-size: 90%;
   }
 
   &:hover {
