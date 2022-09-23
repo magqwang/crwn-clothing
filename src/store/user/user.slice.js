@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const INITIAL_STATE = {
+const USER_INITIAL_STATE = {
   currentUser: null,
 };
 
 const userSlice = createSlice({
   name: "user",
-  initialState: INITIAL_STATE,
+  initialState: USER_INITIAL_STATE,
   reducers: {
     setCurrentUser(state, action) {
       const { payload } = action;

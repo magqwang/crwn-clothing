@@ -1,15 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const INITIAL_STATE = {
+const CATEGORIES_INITIAL_STATE = {
   categories: [],
 };
 
 const categoriesSlice = createSlice({
   name: "categories",
-  initialState: INITIAL_STATE,
+  initialState: CATEGORIES_INITIAL_STATE,
   reducers: {
     setCategories(state, action) {
-      console.log("setCategories reducer");
       const { payload } = action;
       return { ...state, categories: payload };
     },
