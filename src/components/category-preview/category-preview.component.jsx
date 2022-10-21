@@ -4,7 +4,6 @@ import {
   Preview,
 } from "./category-preview.styles";
 
-import React from "react";
 import ProductCard from "../product-card/product-card.component";
 
 const CategoryPreview = ({ title, products }) => {
